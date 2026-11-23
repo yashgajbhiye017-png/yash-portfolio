@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Yash Gajbhiye — Computer Science Engineering Undergraduate, Software Developer, and AI/ML Enthusiast based in Pune, India." />
+  <title>Yash Gajbhiye | Software Developer &amp; AI/ML Enthusiast</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ambient Background Glow -->
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- Sticky Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand" aria-label="Yash Gajbhiye Home">
+        <span class="brand-badge">YG</span>
+        <span class="brand-text">Yash<span class="accent">.</span>dev</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#education" class="nav-link" data-section="education">Education</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cmd-trigger" id="openCmdBtn" aria-label="Open Command Palette" title="Quick Navigation (Ctrl+K or Cmd+K)">
+          <i data-lucide="search" class="icon-sm"></i>
+          <span>Quick Jump</span>
+          <kbd>⌘K</kbd>
+        </button>
+
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+          <i data-lucide="sun" class="icon-sm sun-icon"></i>
+          <i data-lucide="moon" class="icon-sm moon-icon"></i>
+        </button>
+
+        <a href="assets/resume.pdf" download class="btn btn-primary btn-sm nav-resume-btn">
+          <i data-lucide="download" class="icon-sm"></i>
+          <span>Resume</span>
+        </a>
+
+        <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <i data-lucide="menu" class="icon-md"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="status-pill">
+              <span class="pulse-dot"></span>
+              <span>Open to Software Engineering &amp; AI/ML Internships</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Yash Gajbhiye</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Computer Science Engineering Undergraduate &bull;
+              <span class="typing-wrapper" id="typingText" aria-live="polite">Software Developer</span><span class="cursor">|</span>
+            </p>
+
+            <p class="hero-description">
+              Building reliable full-stack applications, practical AI/ML workflows, and clean algorithmic solutions from Pune, India. Focused on strong CS fundamentals, maintainable code, and shipping real-world software.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <i data-lucide="folder-git-2" class="icon-sm"></i>
+                <span>View Projects</span>
+              </a>
+              <a href="assets/resume.pdf" download class="btn btn-secondary">
+                <i data-lucide="file-text" class="icon-sm"></i>
+                <span>Download Resume</span>
+              </a>
+              <button type="button" class="btn btn-ghost" id="heroCopyEmailBtn" data-email="yashgajbhiye017@gmail.com">
+                <i data-lucide="copy" class="icon-sm"></i>
+                <span>Copy Email</span>
+              </button>
+            </div>
+
+            <div class="hero-meta">
+              <span><i data-lucide="map-pin" class="icon-xs"></i> Pune, Maharashtra, India</span>
+              <a href="https://github.com/yashgajbhiye017-png" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="github" class="icon-xs"></i> github.com/yashgajbhiye017-png
+              </a>
+            </div>
+          </div>
+
+          <!-- Profile Card -->
+          <div class="hero-visual">
+            <div class="profile-card bento-card">
+              <div class="profile-frame">
+                <img
+                  src="assets/profile.jpg"
+                  alt="Portrait of Yash Gajbhiye"
+                  class="profile-img"
+                  id="profileImg"
+                  onerror="this.style.display='none'; document.getElementById('profileFallback').style.display='flex';"
+                />
+                <div class="profile-fallback" id="profileFallback" style="display: none;">
+                  <span>YG</span>
+                </div>
+              </div>
+              <div class="profile-card-footer">
+                <div>
+                  <p class="profile-card-name">Yash Gajbhiye</p>
+                  <p class="profile-card-role">B.Tech Computer Science</p>
+                </div>
+                <span class="badge badge-accent">2024 – 2028</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Stats Strip -->
+        <div class="bento-stats">
+          <div class="stat-card bento-card">
+            <div class="stat-icon"><i data-lucide="graduation-cap" class="icon-md"></i></div>
+            <div>
+              <h3>B.Tech CS</h3>
+              <p>Core Computer Science</p>
+            </div>
+          </div>
+          <div class="stat-card bento-card">
+            <div class="stat-icon"><i data-lucide="cpu" class="icon-md"></i></div>
+            <div>
+              <h3>DSA &amp; Core CS</h3>
+              <p>Java, OOP, DBMS, OS, CN</p>
+            </div>
+          </div>
+          <div class="stat-card bento-card">
+            <div class="stat-icon"><i data-lucide="sparkles" class="icon-md"></i></div>
+            <div>
+              <h3>Full-Stack &amp; AI/ML</h3>
+              <p>Python, Flask, LLMs, SQL</p>
+            </div>
+          </div>
+          <div class="stat-card bento-card">
+            <div class="stat-icon"><i data-lucide="git-branch" class="icon-md"></i></div>
+            <div>
+              <h3>Active Builder</h3>
+              <p>Consistent GitHub Commits</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Proof of Work Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">01 / Overview</span>
+          <h2 class="section-title">Engineering Mindset &amp; Proof of Work</h2>
+        </div>
+
+        <div class="about-bento-grid">
+          <article class="bento-card about-main">
+            <h3>About Me</h3>
+            <p>
+              I am a Computer Science Engineering undergraduate in Pune with a strong focus on backend architecture, Data Structures &amp; Algorithms in Java, and applied Artificial Intelligence &amp; Machine Learning.
+            </p>
+            <p>
+              Rather than just studying theory, I focus on translating core CS concepts—relational database design, RESTful APIs, operating systems, and algorithmic efficiency—into working software projects and open-source repositories.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2" class="icon-sm accent"></i>
+                <span>Structured problem solver with daily DSA practice in Java</span>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2" class="icon-sm accent"></i>
+                <span>Experienced with Python/Flask backends &amp; SQL/NoSQL data modeling</span>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2" class="icon-sm accent"></i>
+                <span>Hands-on exploration of ML pipelines, NLP, and LLM prompt engineering</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="bento-card achievement-card">
+            <div class="card-top-icon"><i data-lucide="code-2" class="icon-md"></i></div>
+            <h3>DSA Consistency</h3>
+            <p>
+              Practicing core patterns in Java—Two Pointers, Stacks, Recursion, Hashing, Linked Lists, and Dynamic Programming—with clean, readable implementations pushed to GitHub.
+            </p>
+            <span class="tag-pill">Java &bull; Problem Solving</span>
+          </article>
+
+          <article class="bento-card achievement-card">
+            <div class="card-top-icon"><i data-lucide="git-pull-request" class="icon-md"></i></div>
+            <h3>Open-Source &amp; GitHub</h3>
+            <p>
+              Maintaining clean repository structures, version-controlled development workflows, and documented full-stack &amp; data projects on GitHub.
+            </p>
+            <a href="https://github.com/yashgajbhiye017-png" target="_blank" rel="noopener noreferrer" class="inline-link">
+              Explore GitHub <i data-lucide="arrow-up-right" class="icon-xs"></i>
+            </a>
+          </article>
+
+          <article class="bento-card achievement-card">
+            <div class="card-top-icon"><i data-lucide="brain-circuit" class="icon-md"></i></div>
+            <h3>AI/ML &amp; Research</h3>
+            <p>
+              Building data-driven models with Scikit-Learn, Pandas, and NumPy while researching Generative AI integration, NLP workflows, and scalable system design.
+            </p>
+            <span class="tag-pill">Applied AI &amp; Systems</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">02 / Technical Stack</span>
+          <h2 class="section-title">Skills &amp; Core Competencies</h2>
+          <p class="section-subtitle">Filter by domain to inspect languages, frameworks, databases, and computer science foundations.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-bar" role="tablist" aria-label="Filter Technical Skills">
+          <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-tab" data-filter="languages" role="tab" aria-selected="false">Languages</button>
+          <button class="filter-tab" data-filter="web-backend" role="tab" aria-selected="false">Web &amp; Backend</button>
+          <button class="filter-tab" data-filter="ai-ml" role="tab" aria-selected="false">AI / ML &amp; Data</button>
+          <button class="filter-tab" data-filter="core-tools" role="tab" aria-selected="false">Core CS &amp; Tools</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Programming Languages -->
+          <div class="bento-card skill-category-card" data-category="languages">
+            <div class="skill-card-header">
+              <i data-lucide="terminal" class="icon-md accent"></i>
+              <h3>Programming Languages</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge"><i data-lucide="coffee" class="icon-xs"></i> Java</span>
+              <span class="skill-badge"><i data-lucide="file-code-2" class="icon-xs"></i> Python</span>
+              <span class="skill-badge"><i data-lucide="braces" class="icon-xs"></i> JavaScript</span>
+              <span class="skill-badge"><i data-lucide="database" class="icon-xs"></i> SQL</span>
+            </div>
+          </div>
+
+          <!-- Web & Backend Development -->
+          <div class="bento-card skill-category-card" data-category="web-backend">
+            <div class="skill-card-header">
+              <i data-lucide="globe" class="icon-md accent"></i>
+              <h3>Web &amp; Backend Development</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge"><i data-lucide="layout" class="icon-xs"></i> HTML5</span>
+              <span class="skill-badge"><i data-lucide="palette" class="icon-xs"></i> CSS3</span>
+              <span class="skill-badge"><i data-lucide="smartphone" class="icon-xs"></i> Responsive Web Design</span>
+              <span class="skill-badge"><i data-lucide="server" class="icon-xs"></i> Flask / RESTful APIs</span>
+            </div>
+          </div>
+
+          <!-- AI, Machine Learning & Research -->
+          <div class="bento-card skill-category-card" data-category="ai-ml">
+            <div class="skill-card-header">
+              <i data-lucide="sparkles" class="icon-md accent"></i>
+              <h3>AI, Machine Learning &amp; Research</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge"><i data-lucide="bot" class="icon-xs"></i> Artificial Intelligence</span>
+              <span class="skill-badge"><i data-lucide="line-chart" class="icon-xs"></i> Machine Learning (Scikit-Learn, Pandas, NumPy)</span>
+              <span class="skill-badge"><i data-lucide="message-square-code" class="icon-xs"></i> Generative AI &amp; LLM Integration / Prompt Engineering</span>
+              <span class="skill-badge"><i data-lucide="languages" class="icon-xs"></i> Natural Language Processing (NLP)</span>
+              <span class="skill-badge"><i data-lucide="network" class="icon-xs"></i> Technical Research &amp; System Design</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="bento-card skill-category-card" data-category="web-backend ai-ml">
+            <div class="skill-card-header">
+              <i data-lucide="hard-drive" class="icon-md accent"></i>
+              <h3>Databases</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge"><i data-lucide="database" class="icon-xs"></i> SQLite</span>
+              <span class="skill-badge"><i data-lucide="table" class="icon-xs"></i> MySQL</span>
+              <span class="skill-badge"><i data-lucide="layers" class="icon-xs"></i> MongoDB (NoSQL)</span>
+            </div>
+          </div>
+
+          <!-- Core CS Fundamentals -->
+          <div class="bento-card skill-category-card" data-category="core-tools">
+            <div class="skill-card-header">
+              <i data-lucide="book-open-check" class="icon-md accent"></i>
+              <h3>Core CS Fundamentals</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge"><i data-lucide="binary" class="icon-xs"></i> Data Structures &amp; Algorithms (DSA)</span>
+              <span class="skill-badge"><i data-lucide="boxes" class="icon-xs"></i> Object-Oriented Programming (OOP)</span>
+              <span class="skill-badge"><i data-lucide="database-zap" class="icon-xs"></i> Database Management Systems (DBMS)</span>
+              <span class="skill-badge"><i data-lucide="cpu" class="icon-xs"></i> Operating Systems</span>
+              <span class="skill-badge"><i data-lucide="wifi" class="icon-xs"></i> Computer Networks (TCP/IP, HTTP/HTTPS, DNS)</span>
+              <span class="skill-badge"><i data-lucide="workflow" class="icon-xs"></i> Software Engineering &amp; SDLC</span>
+            </div>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div class="bento-card skill-category-card" data-category="core-tools">
+            <div class="skill-card-header">
+              <i data-lucide="wrench" class="icon-md accent"></i>
+              <h3>Tools &amp; Platforms</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-badge"><i data-lucide="git-branch" class="icon-xs"></i> Git &amp; GitHub (Version Control)</span>
+              <span class="skill-badge"><i data-lucide="code" class="icon-xs"></i> VS Code</span>
+              <span class="skill-badge"><i data-lucide="laptop" class="icon-xs"></i> Eclipse</span>
+              <span class="skill-badge"><i data-lucide="terminal-square" class="icon-xs"></i> IntelliJ IDEA</span>
+              <span class="skill-badge"><i data-lucide="square-terminal" class="icon-xs"></i> Linux / Command Line (Bash)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header section-header-row">
+          <div>
+            <span class="section-eyebrow">03 / Engineering Builds</span>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Click any project card to inspect problem architecture, key features, and source code.</p>
+          </div>
+
+          <div class="project-toolbar">
+            <button type="button" class="btn btn-secondary btn-sm" id="copyProjectsJsonBtn" title="Copy updated projects array to paste into script.js">
+              <i data-lucide="file-json" class="icon-sm"></i>
+              <span>Copy Updated Projects JSON</span>
+            </button>
+            <button type="button" class="btn btn-primary btn-sm" id="openAddProjectBtn">
+              <i data-lucide="plus" class="icon-sm"></i>
+              <span>+ Add Project</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Projects Grid (Populated via JS) -->
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">04 / Academic Background</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="bento-card timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Bachelor of Technology (B.Tech) in Computer Science Engineering</h3>
+                  <p class="timeline-org">Ajeenkya D.Y.Patil, Pune, Maharashtra</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge badge-accent">2024 – 2028</span>
+                  <span class="badge">CGPA: [7.82 / 10.0]</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Relevant Coursework: Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Computer Networks, Discrete Mathematics, and Artificial Intelligence.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="bento-card timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Higher Secondary Certificate (Class XII — Science)</h3>
+                  <p class="timeline-org">Yashwantrao Mohite College, Maharashtra</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge">2022 – 2024</span>
+                  <span class="badge">Percentage: 64%</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Focused on Physics, Chemistry, Mathematics, and Computer Science fundamentals.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="bento-card timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3>Secondary School Certificate (Class X)</h3>
+                  <p class="timeline-org">Nalanda English Medium School, Maharashtra</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge">Completed 2022</span>
+                  <span class="badge">Percentage: 76%</span>
+                </div>
+              </div>
+              <p class="timeline-desc">
+                Strong academic foundation in Mathematics, Science, and analytical reasoning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">05 / Get In Touch</span>
+          <h2 class="section-title">Let's Build Together</h2>
+          <p class="section-subtitle">Interested in discussing software engineering internships, AI/ML collaborations, or full-stack projects? Reach out directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="bento-card contact-info-card">
+            <h3>Direct Channels</h3>
+            <p class="contact-intro">
+              Based in Pune, India and open to remote or on-site engineering opportunities.
+            </p>
+
+            <div class="contact-links">
+              <div class="contact-item">
+                <div class="contact-item-icon"><i data-lucide="mail" class="icon-sm"></i></div>
+                <div class="contact-item-text">
+                  <span class="label">Email</span>
+                  <span class="value" id="displayEmail">yashgajbhiye017@gmail.com</span>
+                </div>
+                <button type="button" class="icon-btn" id="contactCopyEmailBtn" data-email="yashgajbhiye017@gmail.com" aria-label="Copy Email Address" title="Copy Email">
+                  <i data-lucide="copy" class="icon-xs"></i>
+                </button>
+              </div>
+
+              <a href="https://github.com/yashgajbhiye017-png" target="_blank" rel="noopener noreferrer" class="contact-item contact-item-link">
+                <div class="contact-item-icon"><i data-lucide="github" class="icon-sm"></i></div>
+                <div class="contact-item-text">
+                  <span class="label">GitHub</span>
+                  <span class="value">github.com/yashgajbhiye017-png</span>
+                </div>
+                <i data-lucide="arrow-up-right" class="icon-xs"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/yash-gajbhiye-45091630a/" target="_blank" rel="noopener noreferrer" class="contact-item contact-item-link">
+                <div class="contact-item-icon"><i data-lucide="linkedin" class="icon-sm"></i></div>
+                <div class="contact-item-text">
+                  <span class="label">LinkedIn</span>
+                  <span class="value">linkedin.com/in/yash-gajbhiye</span>
+                </div>
+                <i data-lucide="arrow-up-right" class="icon-xs"></i>
+              </a>
+
+              <div class="contact-item">
+                <div class="contact-item-icon"><i data-lucide="map-pin" class="icon-sm"></i></div>
+                <div class="contact-item-text">
+                  <span class="label">Location</span>
+                  <span class="value">Pune, Maharashtra, India</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="bento-card contact-form" id="contactForm" novalidate>
+            <h3>Send a Message</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="senderName">Your Name *</label>
+                <input type="text" id="senderName" name="name" placeholder="Jane Doe" required />
+                <span class="error-msg" id="nameError"></span>
+              </div>
+              <div class="form-group">
+                <label for="senderEmail">Your Email *</label>
+                <input type="email" id="senderEmail" name="email" placeholder="jane@company.com" required />
+                <span class="error-msg" id="emailError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="senderSubject">Subject *</label>
+              <input type="text" id="senderSubject" name="subject" placeholder="Software Engineering Internship Opportunity" required />
+              <span class="error-msg" id="subjectError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="senderMessage">Message *</label>
+              <textarea id="senderMessage" name="message" rows="4" placeholder="Hi Yash, I reviewed your portfolio and would love to connect regarding..." required></textarea>
+              <span class="error-msg" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              <i data-lucide="send" class="icon-sm"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; <span id="currentYear"></span> Yash Gajbhiye. Engineered with semantic HTML5, CSS3 &amp; Vanilla JS.</p>
+      <div class="footer-links">
+        <a href="#hero">Top</a>
+        <a href="https://github.com/yashgajbhiye017-png" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="assets/resume.pdf" download>Resume</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Command Palette Modal (Cmd+K / Ctrl+K) -->
+  <div class="modal-backdrop" id="cmdModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Quick Command Palette">
+    <div class="cmd-dialog">
+      <div class="cmd-input-wrap">
+        <i data-lucide="search" class="icon-sm"></i>
+        <input type="text" id="cmdInput" placeholder="Type a command or search (e.g. 'Projects', 'Python', 'GitHub', 'Copy Email')..." autocomplete="off" />
+        <kbd>ESC</kbd>
+      </div>
+      <ul class="cmd-list" id="cmdList" role="listbox"></ul>
+    </div>
+  </div>
+
+  <!-- Project Case-Study Modal -->
+  <div class="modal-backdrop" id="caseStudyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="caseStudyTitle">
+    <div class="modal-card case-study-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="badge badge-accent" id="caseStudyCategory">Full-Stack</span>
+          <h3 id="caseStudyTitle">Project Title</h3>
+        </div>
+        <button type="button" class="icon-btn" id="closeCaseStudyBtn" aria-label="Close Case Study Modal">
+          <i data-lucide="x" class="icon-md"></i>
+        </button>
+      </div>
+
+      <div class="modal-body" id="caseStudyBody"></div>
+
+      <div class="modal-footer" id="caseStudyFooter"></div>
+    </div>
+  </div>
+
+  <!-- "+ Add Project" Modal -->
+  <div class="modal-backdrop" id="addProjectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="addProjectModalTitle">
+    <div class="modal-card add-project-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="badge badge-accent">Portfolio Builder</span>
+          <h3 id="addProjectModalTitle">Add New Project</h3>
+        </div>
+        <button type="button" class="icon-btn" id="closeAddProjectBtn" aria-label="Close Add Project Modal">
+          <i data-lucide="x" class="icon-md"></i>
+        </button>
+      </div>
+
+      <form id="addProjectForm" class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projTitle">Project Title *</label>
+            <input type="text" id="projTitle" placeholder="e.g., AI Resume Analyzer" required />
+          </div>
+          <div class="form-group">
+            <label for="projCategory">Category / Tag *</label>
+            <input type="text" id="projCategory" placeholder="e.g., AI / ML &amp; Backend" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="projSummary">Short Summary *</label>
+          <input type="text" id="projSummary" placeholder="One-sentence elevator pitch for recruiters..." required />
+        </div>
+
+        <div class="form-group">
+          <label for="projArchitecture">Problem &amp; Architecture Details *</label>
+          <textarea id="projArchitecture" rows="3" placeholder="Describe the problem solved, system design, and key implementation highlights..." required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="projTech">Tech Stack (comma-separated) *</label>
+          <input type="text" id="projTech" placeholder="Python, Flask, Scikit-Learn, JavaScript, SQLite" required />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="projGithub">GitHub Repo URL *</label>
+            <input type="url" id="projGithub" placeholder="https://github.com/yashgajbhiye017-png/repo-name" required />
+          </div>
+          <div class="form-group">
+            <label for="projLive">Live Demo URL (Optional)</label>
+            <input type="url" id="projLive" placeholder="https://your-demo-link.com" />
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-ghost" id="cancelAddProjectBtn">Cancel</button>
+          <button type="submit" class="btn btn-primary">
+            <i data-lucide="plus-circle" class="icon-sm"></i>
+            <span>Save &amp; Render Project</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
